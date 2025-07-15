@@ -2,12 +2,13 @@
 
 자세한 레퍼런스 : https://velog.io/@pddj21/CarlaAutoware-PCD-Map-Generation-in-Carla-Using-ROS-Bag-and-TF-Transformations-without-slam
 
-ROS 2 기반 환경에서 TF 정보를 활용하여 `/carla/hero/semantic_lidar` PointCloud2 토픽을 누적하고 `.pcd` 형식으로 저장하는 슬램리스(SLAM-less) 포인트클라우드 생성 유틸리티입니다.
+ROS 2 기반 환경에서 TF 정보를 활용하여 PointCloud2 토픽을 누적하고 `.pcd` 형식으로 저장하는 슬램리스(SLAM-less) 포인트클라우드 생성 유틸리티입니다.
 
 ## 🔍 소개
 
 `slamless-pcd-generator`는 다음과 같은 기능을 수행합니다:
 
+- PCD를 얻고자 하는 맵에 대한 정보를 지닌 RosBag2 필요 (RosBag 필수구성요소 라이다토픽, tf토픽)
 - 지정된 PointCloud2 토픽 구독
 - `tf2_ros`를 이용한 `map` 프레임 기준 좌표 변환
 - Open3D를 활용한 포인트 누적 및 저장
